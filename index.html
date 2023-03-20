@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.5/pannellum.css" />
+    <script src="https://cdn.pannellum.org/2.5/pannellum.js"></script>
+    <title>View 360°</title>
+</head>
+<body>
+    <section class="photos360">
+    <h1>360° Photos</h1>
+
+      
+      <style>
+        *{
+            outline: none;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: #222;
+        }
+        html,body{
+            scroll-behavior: smooth;
+        }
+
+        .phots360{
+            display: flex;
+            height: auto;
+            background: black;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-y: scroll;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+            color: #fff;
+        }
+        p{
+            color: rgba(255, 255, 255, 0.52);
+        }
+        #beach,#yana,#chandragutti,#muregar,#shivganga,#storm,#unchalli {
+          width: 80vw;
+          height:90vh;
+          margin: 3% auto;
+          border-radius: 0.5rem;
+          box-shadow: 0 10px 20px 10px #000000;
+      }      
+
+      @media(max-width:900px){
+        #beach,#yana,#chandragutti,#muregar,#shivganga,#storm,#unchalli {
+          width: 90vw;
+          height:50vh;
+          margin: 10% auto;
+          border-radius: 0.5rem;
+          box-shadow: 0 5px 10px 7px #000000;
+      }    
+      }
+      </style>
+
+        <div id="yana"></div>  
+        <script>
+            pannellum.viewer('yana', {
+                "type": "equirectangular",
+                "panorama": "./photos/yana.jpg",
+                "autoLoad":true,
+                "compass":true,
+                "previewTitle":"Shot on Phone",
+                "previewAuthor":"Vilas Hegde",
+                "backgroundColor":[0,0,0]
+            });
+        </script>
+        
+        <div id="chandragutti"></div>  
+        <script>
+
+            pannellum.viewer('chandragutti', {
+                "type": "equirectangular",
+                "panorama": "./photos/chandragutti.jpg",
+                "autoLoad":true,
+                "compass":true,
+                "previewTitle":"Shot on Phone",
+                "previewAuthor":"Vilas Hegde",
+                "backgroundColor":[0,0,0]
+            });
+        </script>
+        <div id="muregar"></div>  
+        <script>
+            pannellum.viewer('muregar', {
+                "type": "equirectangular",
+                "panorama": "./photos/muregar.jpg",
+                "autoLoad":true,
+                "compass":true,
+                "previewTitle":"Shot on Phone",
+                "previewAuthor":"Vilas Hegde",
+                "backgroundColor":[0,0,0]
+            });
+        </script>
+        <div id="unchalli"></div>  
+        <script>
+            pannellum.viewer('unchalli', {
+                "type": "equirectangular",
+                "panorama": "./photos/unchalli.jpg",
+                "autoLoad":true,
+                "compass":true,
+                "previewTitle":"Shot on Phone",
+                "previewAuthor":"Vilas Hegde",
+                "backgroundColor":[0,0,0]
+            });
+        </script>
+        <div id="shivganga"></div>  
+        <script>
+            pannellum.viewer('shivganga', {
+                "type": "equirectangular",
+                "panorama": "./photos/shivganga.jpg",
+                "autoLoad":true,
+                "compass":true,
+                "previewTitle":"Shot on Phone",
+                "previewAuthor":"Vilas Hegde",
+                "backgroundColor":[0,0,0]
+            });
+        </script>
+        <div id="storm"></div>  
+        <script>
+            pannellum.viewer('storm', {
+                "type": "equirectangular",
+                "panorama": "./photos/storm.jpg",
+                "autoLoad":true,
+                "compass":true,
+                "previewTitle":"Shot on Phone",
+                "previewAuthor":"Vilas Hegde",
+                "backgroundColor":[0,0,0]
+            });
+        </script>
+
+        <div id="beach"></div>  
+        <script>
+            pannellum.viewer('beach', {
+                "type": "equirectangular",
+                "panorama": "./photos/beach.jpg",
+                "autoLoad":true,
+                "compass":true,
+                "previewTitle":"Shot on Phone",
+                "previewAuthor":"Vilas Hegde",
+                "backgroundColor":[0,0,0]
+            });
+        </script>
+
+<center id="copyright">
+    <br>
+    <p>
+        © Vilas Hegde -
+
+         <span id="currentYear">x</span>         
+        
+    </p>
+</center>
+<script>
+    var currentYear = new Date().getFullYear(); //variable containing current year
+    document.getElementById("currentYear").innerHTML = currentYear; //set specified HTML element to currentYear variable
+</script>
+
+      </section>
+      
+      
+    
+</body>
+</html>
